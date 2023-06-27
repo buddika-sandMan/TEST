@@ -2,6 +2,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+
+//SELECT PROJECT AND CLICK CTRL + SHIFT + ALT + U (WE CAN GET UI VIEW OF OUR PROJECT)
+
 public class AppInit {
 
     //Database area
@@ -22,9 +25,12 @@ public class AppInit {
 
         //Testing Item array
         items[0][0] = "0001";
-        items[0][0] = "Desc 1";
-        items[0][0] = "13";
-        items[0][0] = "50";
+        items[0][1] = "Desc 1";
+        items[0][2] = "13";
+        items[0][3] = "50";
+
+        //Test Order array
+        //
 
         Scanner input = new Scanner(System.in);
         //Initial question list
@@ -379,7 +385,7 @@ public class AppInit {
         String code = input.nextLine();
 
         String description;
-        double unitPrice;
+        double unitPrice = 0;
         int qtyHand;
 
         //Item find
@@ -412,7 +418,8 @@ public class AppInit {
                     orders[i][3] = selectDate;
                     orders[i][4] = String.valueOf(unitPrice);
                 }
+            }
         }
-        }
+        System.out.println("Order completed!");
     }
 }
